@@ -15,18 +15,18 @@ MongoClient.connect('mongodb://localhost:27017/TodoApp', (err,db) => {
 //		console.log('Unable to fetch data',err);
 //	})
 	
-//	db.collection('ToDos').find().count().then((count) => {
-//		console.log(`ToDos count: ${count}`);
-//	},(err) => {
-//		console.log('Unable to fetch data',err);
-//	})
+	db.collection('ToDos').find().count().then((count) => {
+		console.log(`ToDos count: ${count}`);
+	},(err) => {
+		console.log('Unable to fetch data',err);
+	})
 	
-	db.collection('user').find({name:'tomas'}).toArray().then((doc) => {
-		console.log('search for name...');
-		console.log(JSON.stringify(doc, undefined, 2));
-	}, (err) => {
-		console.log('unable to fetch data',err);
-	});
+//	db.collection('user').find({name:'tomas'}).toArray().then((doc) => {
+//		console.log('search for name...');
+//		console.log(JSON.stringify(doc, undefined, 2));
+//	}, (err) => {
+//		console.log('unable to fetch data',err);
+//	});
 
 	
 	
